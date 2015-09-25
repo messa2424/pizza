@@ -1,6 +1,24 @@
-<?php require_once './inc/template.php'; ?>
-<?php render('head',array('title'=>'pizza shop')); ?>
+<?php
+    // extract Page selection
+    $page = 'index';
+    if( isset($_GET['page']))
+    $page = $_GET['page'];
 
-<!-- here comes the content -->
+    // include libary
+    require_once './inc/template.php';
 
-<?php render('foot'); ?>  
+    //render page in template mode
+    render('head',array('title'=>'pizza shop'));
+    switch ($page){
+        case 'index':
+            require('./html/index.php');
+            break;
+        case 'search':
+            require('./html/serach.php');
+            break;
+        default:
+            require('./html/error.php');
+            break;
+    }
+    render('foot');
+?>  

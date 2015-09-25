@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; }
+html,body { width:100%; height: 99%; }
+body {     
+    background-image: url("../images/pizza.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*
+ * center the main box
+ */
+body { display:table; }
+#background { display:table-cell; z-index: 90; }
+#background { background: rgba(0,0,0,0.7); box-sizing:border-box; }
+#background { width:100%; height: 100%; }
+#background { display:table-cell; vertical-align: middle; }
+#main { width: 20em; min-height: 20em; margin:auto;  }
+
+#main { padding:1em;}
+/*
+ * error .php
+ */
+.box { border: 1px solid black; background:white; color: gray;}
+.error { border: 1px solid red; background: lightcoral; color: red; }
